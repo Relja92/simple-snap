@@ -1,0 +1,32 @@
+{
+  "version": "0.3.4",
+  "description": "Snap Test",
+  "proposedName": "Snap Test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/relja92/snap-test.git"
+  },
+  "source": {
+    "shasum": "pDQOnazVncUBe81gvJIPVyp/KyicIoIq5ClNvHjRuCQ=",
+    "location": {
+      "npm": {
+        "iconPath": "images/icon.svg",
+        "filePath": "dist/bundle.js",
+        "packageName": "@relja92/snap-test",
+        "registry": "https://registry.npmjs.org/"
+      }
+    }
+  },
+  "initialPermissions": {
+    "snap_dialog": {},
+    "endowment:rpc": {
+      "dapps": true,
+      "snaps": false
+    },
+    "endowment:lifecycle-hooks": {},
+    "endowment:page-home": {},
+    "endowment:transaction-insight": {},
+    "snap_manageState": {}
+  },
+  "manifestVersion": "0.1"
+}

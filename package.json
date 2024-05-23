@@ -56,5 +56,8 @@
       "@lavamoat/preinstall-always-fail": false,
       "sharp": true
     }
+  },
+  "dependencies": {
+    "@metamask/utils": "^8.4.0"
   }
 }

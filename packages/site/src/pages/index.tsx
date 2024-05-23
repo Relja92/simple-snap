@@ -26,7 +26,16 @@ const Container = styled.div`
   ${({ theme }) => theme.mediaQueries.small} {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
-    margin-top: 2rem;
+    margin-top0?: {
+      version: string;
+    }
+    p0: {
+      version: string;
+    }
+    p0: {
+      version: string;
+    }
+    p: 2rem;
     margin-bottom: 2rem;
     width: auto;
   }
@@ -114,6 +123,10 @@ const Index = () => {
     await invokeSnap({ method: 'hello' });
   };
 
+  const handleDialogClick = async () => {
+    await invokeSnap({ method: 'dialog' });
+  };
+
   return (
     <Container>
       <Heading>
@@ -139,7 +152,7 @@ const Index = () => {
             fullWidth
           />
         )}
-        {!installedSnap && (
+        {true && (
           <Card
             content={{
               title: 'Connect',
@@ -179,6 +192,25 @@ const Index = () => {
             button: (
               <SendHelloButton
                 onClick={handleSendHelloClick}
+                disabled={!installedSnap}
+              />
+            ),
+          }}
+          disabled={!installedSnap}
+          fullWidth={
+            isMetaMaskReady &&
+            Boolean(installedSnap) &&
+            !shouldDisplayReconnectButton(installedSnap)
+          }
+        />
+
+        <Card
+          content={{
+            title: 'Show Options ',
+            description: 'Buy, Send, Swap, Bridge, Portfolio',
+            button: (
+              <SendHelloButton
+                onClick={handleDialogClick}
                 disabled={!installedSnap}
               />
             ),
